@@ -49,7 +49,7 @@ var app = (function() {
 					vibrate: [200, 100, 200, 100, 200, 100, 200],
 					data: {
 						dateOfArrival: Date.now(),
-						primaryKey: 1
+						primaryKey: 2
 					},
 					tag: 1,
 
