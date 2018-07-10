@@ -14,12 +14,25 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 (function() {
-  'use strict';
+	'use strict';
 
-  // TODO 2.6 - Handle the notificationclose event
+	// TODO 2.6 - Handle the notificationclose event
+	self.addEventListener('notificationclose', function(e) {
+		var notification = e.notification;
+		var primaryKey = notification.data.primaryKey;
 
-  // TODO 2.7 - Handle the notificationclick event
+		console.log(notification.data);
+		console.log('Closed notification: ' + primaryKey);
+	});
 
-  // TODO 3.1 - add push event listener
+	// TODO 2.7 - Handle the notificationclick event
+	self.addEventListener('notificationclick', function(e) {
+
+		console.log(clients);
+		// TODO 2.8 - change the code to open a custom page
+		clients.openWindow('http://google.com');
+	});
+
+	// TODO 3.1 - add push event listener
 
 })();
